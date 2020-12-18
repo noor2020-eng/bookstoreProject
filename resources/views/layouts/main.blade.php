@@ -1,98 +1,74 @@
-<!doctype html>
-<html lang="en" class="h-100">
+<!DOCTYPE html>
+<html lang="en">
 
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="">
-    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
-    <meta name="generator" content="Jekyll v4.1.1">
-    <title>Our Exmples - @yield("title")</title>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <link rel="canonical" href="https://getbootstrap.com/docs/4.5/examples/sticky-footer-navbar/">
+        <title>Documentation</title>
+        <link href="" rel="stylesheet">
+        <link href="{{ asset('css/monokai.css') }}" rel="stylesheet">
+        <link href="{{ asset('css/font-awesome.min.css')}}" rel="stylesheet">
+        <link href="{{ asset('css/jquery-ui.min.css')}}" rel="stylesheet" />
+        <link href="{{ asset('css/lobipanel.min.css')}}" rel="stylesheet" />
+        <link href="{{ asset('css/sidebar.css')}}" rel="stylesheet">
+        <link href="{{ asset('css/bootstrap.min.css')}}" rel="stylesheet">
+        <link href="{{ asset('css/style.css')}}" rel="stylesheet">
+        <link href="{{ asset('css/doc-style.css')}}" rel="stylesheet">
+        <link href="{{ asset('css/helper.css')}}" rel="stylesheet">
 
-    <!-- Bootstrap core CSS -->
-    <link href="{{asset('/bootstrap/css/bootstrap.min.css') }}" rel="stylesheet"
-        integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    </head>
 
-
-    <style>
-    .bd-placeholder-img {
-        font-size: 1.125rem;
-        text-anchor: middle;
-        -webkit-user-select: none;
-        -moz-user-select: none;
-        -ms-user-select: none;
-        user-select: none;
-    }
-
-    @media (min-width: 768px) {
-        .bd-placeholder-img-lg {
-            font-size: 3.5rem;
-        }
-    }
-    </style>
-    <!-- Custom styles for this template -->
-    <link href="{{ asset('bootstrap/sticky-footer-navbar.css') }}" rel="stylesheet">
-    @yield("css")
-</head>
-
-<body class="d-flex flex-column h-100">
-    <header>
-        <!-- Fixed navbar -->
-        <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
-            <a class="navbar-brand" href="#">BookStore Dashboard</a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse"
-                aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarCollapse">
-                <ul class="navbar-nav mr-auto">
-                    <li class="nav-item active">
-                        <a class="nav-link" href="{{asset('/')}}">Home <span class="sr-only">(current)</span></a>
-                    </li>
-
-
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
-                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            Send To View
-                        </a>
-                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <a class="dropdown-item" href="{{asset("send-to-view/with")}}">With</a>
-                            <a class="dropdown-item" href="{{asset("send-to-view/with-name")}}">With Name</a>
-                            <div class="dropdown-divider"></div>
-                            <a class="dropdown-item" href="{{asset("send-to-view/compact")}}">Compact</a>
-                        </div>
-                    </li>
-                </ul>
+    <body>
+        <div class="sidebar sidebar-hide-to-small sidebar-shrink sidebar-gestures">
+            <div class="nano">
+                <div class="nano-content">
+                    <ul>
+                        <li><a href='{{ route("Categories.index")}}'> Categories </a></li>
+                        <li><a href='{{ route("product.index")}}'> Products </a></li>
+                        
+                    </ul>
+                </div>
             </div>
-        </nav>
-    </header>
-
-    <!-- Begin page content -->
-    <main role="main" class="flex-shrink-0">
-        <div class="container">
-            <h1 class="mt-5">@yield("title")</h1>
-            @yield("content")
         </div>
-    </main>
 
-    <footer class="footer mt-auto py-3">
-        <div class="container">
-            <span class="text-muted">All Copy rights Reserverd to BOOKSTORE2020</span>
+        <div class="header">
+            <div class="pull-left">
+                <div class="logo"><span>Book store</span></div>
+                <div class="hamburger sidebar-toggle">
+                    <span class="line"></span>
+                    <span class="line"></span>
+                    <span class="line"></span>
+                </div>
+            </div>
+
         </div>
-    </footer>
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
-        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
-    </script>
-    <script>
-    window.jQuery || document.write('<script src="/docs/4.5/assets/js/vendor/jquery.slim.min.js"><\/script>')
-    </script>
-    <script src="{{ asset('bootstrap/js/bootstrap.bundle.min.js') }}"
-        integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous">
-    </script>
-</body>
-@yield("scripts")
+
+        <div class="content-wrap">
+            <div class="main">
+                <div class="container-fluid">
+
+                    <div class="main-content">
+                    @yield("content")
+                       
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script src="{{ asset('js/jquery.min.js') }}"></script>
+        <script src="{{ asset('js/lobipanel.js') }}"></script>
+        <script src="{{ asset('js/jquery-ui.min.js') }}"></script>
+        <script src="{{ asset('js/jquery.ui.touch-punch.min.js') }}"></script>
+        <script src="{{ asset('js/jquery.nanoscroller.min.js') }}"></script>
+        <script src="{{ asset('js/sidebar.js') }}"></script>
+        <script src="{{ asset('bootstrap/bootstrap.min.js') }}"></script>
+        <script src="{{ asset('js/underscore-min.js') }}"></script>
+        <script src="{{ asset('js/highlight.min.js') }}"></script>
+
+        <script src="{{ asset('js/scripts.js') }}"></script>
+
+    </body>
 
 </html>

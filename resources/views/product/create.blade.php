@@ -1,8 +1,7 @@
 @extends("layouts.main")
-@section("title","Create Product")
-
 @section("content")
 
+<h1 class="mb-4">Create Product</h1>
 <form method='post' action='{{asset("products")}}'>
     @csrf
     <div class="row">

@@ -1,7 +1,7 @@
 @extends("layouts.main")
-@section("title","Edit Product")
 @section("content")
 
+<h1 class="mb-4">Edit Product</h1>
 <form method='post' action='{{asset("products/".$item->id)}}'>
     @csrf
     @method("put")

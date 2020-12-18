@@ -1,6 +1,7 @@
 @extends("layouts.main")
-@section("title","Show products")
 @section("content")
+
+<h1 class="mb-4">Show Products</h1>
 <div>
     <div class="row">
         <div class="col-md-6 mb-3">
